@@ -21,7 +21,7 @@ To get a local copy up and running follow these simple steps:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/bookstore-inventory-management.git
+git clone https://github.com/CharudattaGhute/Book-store-inventory-management.git
 
 ```
 
