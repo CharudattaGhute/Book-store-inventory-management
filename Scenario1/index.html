@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+
+        <h1 class="title " style="color: brown; display: flex; align-items: center; justify-content: center;">
+            Online
+            Bookstore Inventory Management</h1>
+        <label for="bookTitle" style="margin-top: 5%;">Title</label><br>
+        <input type="text" class="form-control" placeholder="Title" id="title" /><br>
+        <label for="inputexample">Author</label><br>
+        <input type="text" class="form-control" placeholder="Enter the author" id="author"><br>
+        <label for="inputexample">Price</label><br>
+        <input type="price" class="form-control" placeholder="Price" id="price" /><br>
+        <label for="inputexample">Quantity</label><br>
+        <input type="number" class="form-control" placeholder="Number of books available" id="quantity" /><br>
+        <div class="btn-group">
+            <button class="btn btn-success btn-lg mt-3 ml-5" onclick="submit()"
+                style="border-radius: 10px;">Submit</button>
+            <button class="btn btn-danger btn-lg mt-3 ml-2" onclick="clearall()" style="border-radius: 10px;"
+                id="clearBtn">Clear All</button>
+
+        </div>
+    </div>
+    <div class="container" id="content" style="border-radius: 10px;">
+        <table class="table table-dark mt-5">
+            <thead>
+                <tr>
+                    <th scope="col">Book Title</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody id="booklist"></tbody>
+        </table>
+    </div>
+    <div class="modal fade" id="editModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Edit Book</h4>
+                </div>
+                <div class="modal-body" id="showdatahere">
+                    <form action="" id="editForm"></form>
+                    <div class="form-group mb-3">
+                        <label for="bookTitle">Title</label><br>
+                        <input type="text" class="form-control" placeholder="Title" id="title1" /><br>
+                        <label for="inputexample">Author</label><br>
+                        <input type="text" class="form-control" placeholder="Enter the author" id="author1"><br>
+                        <label for="inputexample">Price</label><br>
+                        <input type="price" class="form-control" placeholder="Price" id="price1" /><br>
+                        <label for="inputexample">Quantity</label><br>
+                        <input type="number" class="form-control" placeholder="Number of books available"
+                            id="quantity1" /><br>
+                        <div class="modal-footer">
+                            <button class="btn btn-success btn-lg mt-3 ml-5" style="border-radius: 20px;" id="editbtn"
+                                onclick="editcontent()">Save
+                                Changes</button>
+                            <button class="btn btn-warning btn-lg mt-3 " style="border-radius: 20px;" id="clearall"
+                                data-dismiss="modal">Close</button>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+        <script src="script.js"></script>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
